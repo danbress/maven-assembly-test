@@ -7,17 +7,7 @@
     <artifactId>danbress-assembly-test</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
-  <groupId>danbress.com</groupId>
   <artifactId>dan-site</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
   <name>dan-site</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+  <packaging>pom</packaging>
 </project>

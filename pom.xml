@@ -21,5 +21,7 @@
   <modules>
     <module>dan-api</module>
     <module>dan-server</module>
+    <module>dan-docs</module>
+    <module>dan-site</module>
   </modules>
 </project>

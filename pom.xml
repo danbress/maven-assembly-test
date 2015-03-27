@@ -39,4 +39,11 @@
 			</plugin>
 		</plugins>
 	</reporting>
+	<distributionManagement>
+		<site>
+			<id>danbress-com</id>
+			<name>danbress.com</name>
+			<url>http://danbress.com</url>
+		</site>
+	</distributionManagement>
 </project>

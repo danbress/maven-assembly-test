@@ -26,6 +26,19 @@
 		</configuration> <executions> <execution> <id>aggregate</id> <goals> <goal>aggregate</goal> 
 		</goals> <phase>compile</phase> <configuration> </configuration> </execution> 
 		</executions> </plugin> </plugins> </build> -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.4</version>
+				<configuration>
+					<generateProjectInfo>false</generateProjectInfo>
+					<generateSitemap>false</generateSitemap>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 	<reporting>
 		<plugins>
 			<plugin>
@@ -35,6 +48,36 @@
 				<configuration>
 
 				</configuration>
+				<reportSets>
+					<reportSet>
+						<id>default</id>
+						<configuration>
+						</configuration>
+						<reports>
+							<report>javadoc</report>
+						</reports>
+					</reportSet>
+					<reportSet>
+						<id>aggregate</id>
+						<configuration>
+						</configuration>
+						<reports>
+							<report>aggregate</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.8</version>
+				<reportSets>
+					<reportSet>
+						<reports>
+
+						</reports>
+					</reportSet>
+				</reportSets>
 			</plugin>
 		</plugins>
 	</reporting>

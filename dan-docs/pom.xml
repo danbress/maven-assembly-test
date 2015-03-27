@@ -20,7 +20,7 @@
 				<executions>
 					<execution>
 						<id>output-html</id>
-						<phase>prepare-package</phase>
+						<phase>generate-resources</phase>
 						<goals>
 							<goal>process-asciidoc</goal>
 						</goals>
@@ -58,6 +58,24 @@
 								<descriptor>src/main/assembly/dependencies.xml</descriptor>
 							</descriptors>
 						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<phase>prepare-package</phase>
+						<configuration>
+							<tasks>
+								<mkdir dir="target/site"/>
+								<copy file="target/generated-docs/overview.html" tofile="target/site/overview.html"/>
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
 					</execution>
 				</executions>
 			</plugin>
